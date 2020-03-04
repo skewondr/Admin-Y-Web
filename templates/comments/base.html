@@ -1,0 +1,32 @@
+{% load static %}
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="stylesheet" href="{% static 'css/codepen/menu.css' %}">
+</head>
+<div class="header"></div>
+  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+  <label for="openSidebarMenu" class="sidebarIconToggle">
+    <div class="spinner diagonal part-1"></div>
+    <div class="spinner horizontal"></div>
+    <div class="spinner diagonal part-2"></div>
+  </label>
+  <div id="sidebarMenu">
+    <ul class="sidebarMenuInner">
+      <li>User name <span>Creator</span></li>
+      <li><a href="">Rank</a></li>
+      <li><a href="" target="_blank">Create</a></li>
+      <li><a href="" target="_blank">Result</a></li>
+      <li><a href="" target="_blank">General Forum</a></li>
+    </ul>
+  </div>
+  <div id='center' class="main center">
+    <!--<div class="mainInner">
+      <div>PURE CSS SIDEBAR TOGGLE MENU</div>
+    </div>-->
+    {% block content %}
+    {% endblock %}
+  </div>

@@ -1,0 +1,132 @@
+{% load static %}
+
+<header>
+  <title>Home</title>
+  <link href="{% static 'css/bootstrap/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/bootstrap/one-page-wonder.min2.css' %}" rel="stylesheet">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+</header>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'home' %}">Yawn_data</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Log In</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header id="header" class="masthead2 text-center text-white">
+    <div class="masthead-content">
+      <div class="container">
+        <h1 class="masthead-subheading mb-0">YD helps to create a dataset</h1>
+        <h2 class="masthead-subheading mb-0">Related to sentiment classification</h2>
+        <br><br>
+        <a href="#content" onclick="fnMove();" class="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a>
+      </div>
+    </div>
+
+  </header>
+
+  <div id="content">
+    <br><br>
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <img class="img-fluid rounded-circle" src="{% static 'img/03.jpg' %}" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h2 class="display-4">How to approach my video's comments?</h2>
+              <p>Go to Youtube, copy the url of the video and enter it into the search box.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="p-5">
+              <img class="img-fluid rounded-circle" src="{% static 'img/02.jpg' %}" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="p-5">
+              <h2 class="display-4">How to label each comment?</h2>
+              <p>Click the face button, choose one of the following buttons. (Multiple selection is possible)</p>
+              <ol>
+                <li>Request</li>
+                <li>Question</li>
+                <li>Good</li>
+                <li>Bad</li>
+                <li>Explanation</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <img class="img-fluid rounded-circle" src="{% static 'img/01.jpg' %}" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h2 class="display-4">Check the result!</h2>
+              <p>You can download the whole dataset shared by others. You can also check various statistics about this dataset. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-black">
+    <div class="container">
+      <p class="m-0 text-center text-white small">Copyright &copy; Ywan 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script>
+    function fnMove(){
+        var offset = $("#content").offset();
+        $('html, body').animate({scrollTop : offset.top}, 700);
+    }
+  </script>
+
+  <script src="{% static 'js/bootstrap/jquery.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap/bootstrap.bundle.min.js' %}"></script>
+
+</body>
